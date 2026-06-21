@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addis Africa Charitable Organization</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#0d65c4',
+                        brandGreen: '#29be60',
+                        brandOrange: '#f37021',
+                        brandLightBlue: '#eaf3fc',
+                        brandLightGreen: '#ebf9f0',
+                        brandLightOrange: '#fef1e9',
+                        darkBg: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .active-tab {
+            border-color: #f37021;
+            color: #f37021;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Glassmorphism Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo and Name -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="addis-africa-logo.jpg" alt="Addis Africa Logo" class="h-12 w-12 rounded-full border border-gray-200 object-cover shadow-sm group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/100x100/0d65c4/ffffff?text=AA'">
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tight text-brandBlue flex items-center gap-1">
+                        Addis Africa
+                    </span>
+                    <span class="text-[10px] font-semibold text-brandGreen tracking-widest uppercase">Charitable Org</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#hero" class="text-sm font-semibold text-gray-600 hover:text-brandBlue transition-colors">Home</a>
+                <a href="#about" class="text-sm font-semibold text-gray-600 hover:text-brandBlue transition-colors">About Us</a>
+                <a href="#initiatives" class="text-sm font-semibold text-gray-600 hover:text-brandBlue transition-colors">Our Work</a>
+                <a href="#impact" class="text-sm font-semibold text-gray-600 hover:text-brandBlue transition-colors">Calculator</a>
+                <a href="#contact" class="text-sm font-semibold text-gray-600 hover:text-brandBlue transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#impact" class="px-5 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-brandOrange to-red-500 hover:from-brandOrange hover:to-brandOrange shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
+                    <i class="fa-solid fa-heart mr-2 animate-pulse"></i>Donate Now
+                </a>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-brandBlue focus:outline-none" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner px-4 pt-4 pb-6 space-y-3 transition-all duration-300">
+            <a href="#hero" class="block py-2 px-3 text-sm font-semibold text-gray-600 hover:bg-brandLightBlue hover:text-brandBlue rounded-lg transition-all">Home</a>
+            <a href="#about" class="block py-2 px-3 text-sm font-semibold text-gray-600 hover:bg-brandLightBlue hover:text-brandBlue rounded-lg transition-all">About Us</a>
+            <a href="#initiatives" class="block py-2 px-3 text-sm font-semibold text-gray-600 hover:bg-brandLightBlue hover:text-brandBlue rounded-lg transition-all">Our Work</a>
+            <a href="#impact" class="block py-2 px-3 text-sm font-semibold text-gray-600 hover:bg-brandLightBlue hover:text-brandBlue rounded-lg transition-all">Calculator</a>
+            <a href="#contact" class="block py-2 px-3 text-sm font-semibold text-gray-600 hover:bg-brandLightBlue hover:text-brandBlue rounded-lg transition-all">Contact</a>
+            <a href="#impact" class="block text-center py-3 text-sm font-bold text-white bg-brandOrange rounded-full shadow-md">
+                <i class="fa-solid fa-heart mr-2"></i>Donate Now
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen pt-28 pb-16 flex items-center bg-gradient-to-br from-brandLightBlue via-white to-brandLightGreen overflow-hidden">
+        <!-- Abstract Brand Background Decors -->
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brandGreen/5 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Narrative Area -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandLightOrange border border-brandOrange/20 text-brandOrange text-xs font-bold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-brandOrange animate-ping"></span>
+                        Active Community Impact in Africa
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
+                        Caring for <span class="text-brandBlue">Families</span>.<br>
+                        Building Sustainable <span class="text-brandGreen">Futures</span>.
+                    </h1>
+                    
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Addis Africa Charitable Organization empowers households, supports children, and stabilizes local communities. Together, we can build a strong, resilient framework of life.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#initiatives" class="w-full sm:w-auto px-8 py-4 bg-brandBlue hover:bg-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                            Explore Our Programs
+                        </a>
+                        <a href="#about" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-gray-50 text-gray-700 font-bold rounded-full border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 text-center">
+                            Learn More About Us
+                        </a>
+                    </div>
+
+                    <!-- Impact Quick Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200/60 max-w-md mx-auto lg:mx-0">
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-brandBlue">15k+</span>
+                            <span class="text-xs text-gray-500 font-medium">Families Supported</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-brandGreen">45+</span>
+                            <span class="text-xs text-gray-500 font-medium">Active Initiatives</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-brandOrange">100%</span>
+                            <span class="text-xs text-gray-500 font-medium">Direct Impact</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Live Donation Interactive Widget -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-100 relative">
+                        <!-- Top Accent Banner -->
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brandOrange text-white px-6 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-md">
+                            Direct Support Portal
+                        </div>
+
+                        <div class="text-center mb-6 mt-2">
+                            <h3 class="text-xl font-bold text-gray-900">Make an Immediate Difference</h3>
+                            <p class="text-sm text-gray-500 mt-1">Select an amount to secure food, education, and healthcare.</p>
+                        </div>
+
+                        <!-- Live Interactive Buttons -->
+                        <div class="grid grid-cols-3 gap-3 mb-6">
+                            <button onclick="selectQuickDonation(10)" id="btn-10" class="donation-btn py-3.5 px-2 rounded-2xl border-2 border-brandBlue/10 hover:border-brandBlue hover:bg-brandLightBlue/50 text-brandBlue font-extrabold transition-all text-sm md:text-base">
+                                10 ETB
+                            </button>
+                            <button onclick="selectQuickDonation(100)" id="btn-100" class="donation-btn py-3.5 px-2 rounded-2xl border-2 border-brandBlue/10 hover:border-brandBlue hover:bg-brandLightBlue/50 text-brandBlue font-extrabold transition-all text-sm md:text-base">
+                                100 ETB
+                            </button>
+                            <button onclick="selectQuickDonation(1000)" id="btn-1000" class="donation-btn py-3.5 px-2 rounded-2xl border-2 border-brandBlue/10 hover:border-brandBlue hover:bg-brandLightBlue/50 text-brandBlue font-extrabold transition-all text-sm md:text-base">
+                                1000 ETB
+                            </button>
+                        </div>
+
+                        <!-- Manual Custom Input -->
+                        <div class="mb-6 relative">
+                            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 font-bold"></span>
+                            <input type="number" id="custom-donation-input" oninput="handleCustomInput()" placeholder="Enter custom amount" class="w-full pl-8 pr-16 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-semibold text-gray-800">
+                            <span class="absolute right-4 top-1/2 transform -translate-y-1/2 text-xs font-bold text-gray-400 uppercase">ETB </span>
+                        </div>
+
+                        <!-- Interactive Impact Message dynamic -->
+                        <div id="quick-impact-box" class="p-4 rounded-2xl bg-brandLightGreen border border-brandGreen/20 text-center mb-6 transition-all duration-300">
+                            <p class="text-xs text-gray-500 font-medium">Your Donation Impact</p>
+                            <p id="quick-impact-statement" class="text-sm font-bold text-brandGreen mt-1">
+                                Providing clean water & care items for children in need.
+                            </p>
+                        </div>
+
+                        <!-- Action Submit -->
+                        <button onclick="triggerMockPayment()" class="w-full py-4 bg-gradient-to-r from-brandOrange to-red-500 hover:from-brandOrange hover:to-brandOrange text-white font-extrabold text-base rounded-2xl shadow-lg transform active:scale-95 transition-all duration-300">
+                            Process Safe Donation
+                        </button>
+
+                        <div class="flex items-center justify-center gap-2 mt-4 text-[11px] text-gray-400 font-medium">
+                            <i class="fa-solid fa-shield-halved text-brandGreen"></i> Secure 256-bit encrypted direct transfer
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Story / Meaning of Logo Content -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-brandLightBlue border border-brandBlue/20 text-brandBlue text-xs font-bold uppercase tracking-wider rounded-md">
+                        Our Identity & Mission
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+                        The Meaning Behind Our Shield of Support
+                    </h2>
+                    
+                    <p class="text-gray-600 leading-relaxed">
+                        Our logo embodies the three primary components of sustainable development: The 
+                        <strong class="text-brandBlue">Father/Male framework (represented in Blue)</strong> representing stability and defense, the 
+                        <strong class="text-brandGreen">Mother/Female framework (represented in Green)</strong> signifying nurturing and growth, and the 
+                        <strong class="text-brandOrange">Child (represented in Orange)</strong> in the center, representing the future. 
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Together, wrapped in a protective heart, we aim to deliver resources and structural aid to help communities establish strong foundations for growth.
+                    </p>
+
+                    <!-- Interactive About Tabs -->
+                    <div class="border-b border-gray-100 flex gap-6 text-sm font-bold">
+                        <button onclick="toggleAboutTab('mission')" id="tab-mission" class="pb-3 border-b-2 active-tab transition-all">Mission</button>
+                        <button onclick="toggleAboutTab('vision')" id="tab-vision" class="pb-3 border-b-2 border-transparent text-gray-400 hover:text-gray-600 transition-all">Vision</button>
+                        <button onclick="toggleAboutTab('values')" id="tab-values" class="pb-3 border-b-2 border-transparent text-gray-400 hover:text-gray-600 transition-all">Values</button>
+                    </div>
+
+                    <div id="about-tab-content" class="text-sm text-gray-600 bg-gray-50 p-5 rounded-2xl min-h-[100px] transition-all duration-300">
+                        <!-- Dynamic content populated by JS -->
+                        To create an inclusive world where families have the tools, stability, and supportive environments required to break generational poverty.
+                    </div>
+                </div>
+
+                <!-- Right Visual Showcase with actual Logo & Mock imagery layout -->
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-12 gap-6 items-center">
+                        <div class="col-span-6 space-y-6">
+                            <div class="bg-gradient-to-tr from-brandBlue to-blue-500 rounded-3xl p-6 text-white shadow-lg transform hover:-translate-y-1 transition-transform">
+                                <i class="fa-solid fa-hand-holding-heart text-3xl mb-4"></i>
+                                <h4 class="font-extrabold text-lg">Family Shield</h4>
+                                <p class="text-xs text-white/80 mt-1">Deploying direct economic, food, and emotional support to vulnerable families.</p>
+                            </div>
+                            <div class="bg-gradient-to-tr from-brandGreen to-emerald-500 rounded-3xl p-6 text-white shadow-lg transform hover:-translate-y-1 transition-transform">
+                                <i class="fa-solid fa-children text-3xl mb-4"></i>
+                                <h4 class="font-extrabold text-lg">Child Advocacy</h4>
+                                <p class="text-xs text-white/80 mt-1">Securing clean water, access to primary education, and secure developmental conditions.</p>
+                            </div>
+                        </div>
+                        <div class="col-span-6">
+                            <div class="relative bg-white border border-gray-100 p-4 rounded-3xl shadow-xl">
+                                <img src="addis-africa-logo.jpg" alt="Addis Africa" class="w-full rounded-2xl object-cover" onerror="this.src='https://placehold.co/400x400/0d65c4/ffffff?text=Addis+Africa'">
+                                <div class="absolute -bottom-4 -left-4 bg-brandOrange text-white font-black text-sm p-4 rounded-2xl shadow-lg flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check"></i> Verified Organization
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Initiatives / Our Work Section -->
+    <section id="initiatives" class="py-20 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brandLightGreen border border-brandGreen/20 text-brandGreen text-xs font-bold uppercase tracking-wider rounded-md">
+                    Active Fields of Action
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Pillars of Community Impact</h2>
+                <p class="text-gray-600">Addressing critical needs through custom frameworks mapped specifically with care.</p>
+            </div>
+
+            <!-- Program Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1: Stability (Blue) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
+                    <div class="h-3 bg-brandBlue"></div>
+                    <div class="p-8 space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-brandLightBlue flex items-center justify-center text-brandBlue text-xl">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-brandBlue transition-colors">Family Stability & Aid</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Securing essential home items, livelihood guidance, and emergency resources to keep mothers, fathers, and child support units fully functional and active.
+                        </p>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-gray-500">
+                            <span>Status: Active</span>
+                            <span class="text-brandBlue">4.2k Families Helped <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Growth (Green) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
+                    <div class="h-3 bg-brandGreen"></div>
+                    <div class="p-8 space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-brandLightGreen flex items-center justify-center text-brandGreen text-xl">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-brandGreen transition-colors">Sustainable Education</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Deploying physical learning infrastructure, clean school feeding programs, and training facilities to build community knowledge from the ground up.
+                        </p>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-gray-500">
+                            <span>Status: Growing</span>
+                            <span class="text-brandGreen">22 Schools Rebuilt <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Advocacy (Orange) -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 group">
+                    <div class="h-3 bg-brandOrange"></div>
+                    <div class="p-8 space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-brandLightOrange flex items-center justify-center text-brandOrange text-xl">
+                            <i class="fa-solid fa-baby-carriage"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-brandOrange transition-colors">Healthcare Protection</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Ensuring healthy pregnancies, immediate maternal health items, vaccines, clean hydration, and proper nourishment parameters for all child brackets.
+                        </p>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-gray-500">
+                            <span>Status: Priority</span>
+                            <span class="text-brandOrange">12k Children Serviced <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Calculator Section -->
+    <section id="impact" class="py-20 bg-darkBg text-white relative overflow-hidden">
+        <!-- Accent Glow -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brandBlue/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Narrative Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 text-brandOrange text-xs font-bold uppercase tracking-wider rounded-md">
+                        Interactive Tool
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Quantify Your Humanitarian Reach</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        Every dollar counts. Use our calculator to understand exactly how your voluntary contributions are translated into boots-on-the-ground support in Africa.
+                    </p>
+                    
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brandBlue flex items-center justify-center text-xs text-white mt-1"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm text-gray-300">Complete transparency on fund allocations</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-brandGreen flex items-center justify-center text-xs text-white mt-1"><i class="fa-solid fa-check"></i></div>
+                            <p class="text-sm text-gray-300">Quarterly reports delivered straight to your email</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Slider Interactive Widget -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white/5 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-white/10">
+                        <h3 class="text-xl font-bold mb-8 text-center sm:text-left">Drag the Slider to Project the Impact</h3>
+                        
+                        <!-- Slide Bar Control -->
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between text-sm font-semibold text-gray-300">
+                                <span>Support Amount</span>
+                                <span class="text-brandOrange font-extrabold text-xl" id="slider-val-display">1000 birr </span>
+                            </div>
+                            <input type="range" id="impact-slider" min="10" max="1000" value="250" oninput="calculateImpact(this.value)" class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brandOrange">
+                            <div class="flex justify-between text-xs text-gray-400">
+                                <span>10 ETB  Min</span>
+                                <span>1,000,000 ETB  Max</span>
+                            </div>
+                        </div>
+
+                        <!-- Real-time outputs in Columns -->
+                        <div class="grid sm:grid-cols-3 gap-6">
+                            
+                            <!-- Water Output -->
+                            <div class="bg-white/5 p-5 rounded-2xl text-center border border-white/5">
+                                <div class="w-10 h-10 rounded-full bg-brandLightBlue/10 flex items-center justify-center text-brandBlue mx-auto mb-3 text-lg">
+                                    <i class="fa-solid fa-droplet"></i>
+                                </div>
+                                <span class="block text-xl font-black text-brandBlue" id="calc-water">1,250 Liters</span>
+                                <span class="text-xs text-gray-400">Clean Drinking Water</span>
+                            </div>
+
+                            <!-- Food Output -->
+                            <div class="bg-white/5 p-5 rounded-2xl text-center border border-white/5">
+                                <div class="w-10 h-10 rounded-full bg-brandLightOrange/10 flex items-center justify-center text-brandOrange mx-auto mb-3 text-lg">
+                                    <i class="fa-solid fa-bowl-food"></i>
+                                </div>
+                                <span class="block text-xl font-black text-brandOrange" id="calc-meals">50 Meals</span>
+                                <span class="text-xs text-gray-400">Nourishing School Meals</span>
+                            </div>
+
+                            <!-- Med Supplies Output -->
+                            <div class="bg-white/5 p-5 rounded-2xl text-center border border-white/5">
+                                <div class="w-10 h-10 rounded-full bg-brandLightGreen/10 flex items-center justify-center text-brandGreen mx-auto mb-3 text-lg">
+                                    <i class="fa-solid fa-kit-medical"></i>
+                                </div>
+                                <span class="block text-xl font-black text-brandGreen" id="calc-meds">5 Families</span>
+                                <span class="text-xs text-gray-400">Healthcare Kits Supplied</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Success Stories Section -->
+    <section class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brandLightBlue border border-brandBlue/20 text-brandBlue text-xs font-bold uppercase tracking-wider rounded-md">
+                    Stories of Change
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Voices From the Communities We Reach</h2>
+                <p class="text-gray-600">Discover the real, life-altering impacts generated by our contributors.</p>
+            </div>
+
+            <!-- Interactive Carousel Container -->
+            <div class="relative max-w-4xl mx-auto">
+                <div class="overflow-hidden relative rounded-3xl bg-gray-50 border border-gray-100 p-8 sm:p-12 shadow-md">
+                    
+                    <!-- Dynamic Testimonial Cards -->
+                    <div id="testimonial-slide" class="transition-opacity duration-300 space-y-6">
+                        <!-- Slide Content populated by JS -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-brandBlue text-white font-black rounded-full flex items-center justify-center text-xl">
+                                M
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg" id="testimonial-author">Marta Alene</h4>
+                                <span class="text-xs text-gray-500 font-medium" id="testimonial-role">Community Leader, Addis Ababa Hub</span>
+                            </div>
+                        </div>
+                        <p class="text-lg italic text-gray-600 leading-relaxed" id="testimonial-quote">
+                            "Thanks to the community tools and direct help provided by Addis Africa, 15 families in our district now have running water and support systems."
+                        </p>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <div class="flex items-center justify-end gap-3 mt-8">
+                        <button onclick="prevTestimonial()" class="w-10 h-10 rounded-full bg-white hover:bg-brandLightBlue border border-gray-200 flex items-center justify-center text-gray-600 hover:text-brandBlue shadow-sm transition-colors">
+                            <i class="fa-solid fa-arrow-left text-sm"></i>
+                        </button>
+                        <button onclick="nextTestimonial()" class="w-10 h-10 rounded-full bg-white hover:bg-brandLightBlue border border-gray-200 flex items-center justify-center text-gray-600 hover:text-brandBlue shadow-sm transition-colors">
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Volunteer Section -->
+    <section id="contact" class="py-20 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-stretch">
+                
+                <!-- Left Details & Brand Message -->
+                <div class="lg:col-span-5 space-y-8 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-brandLightOrange border border-brandOrange/20 text-brandOrange text-xs font-bold uppercase tracking-wider rounded-md">
+                            Get In Touch
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">We Love to Hear From You</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            Have questions about our initiatives, volunteer paths, or custom corporate sponsorship? Reach out immediately. Our team based in Addis Ababa responds promptly.
+                        </p>
+                    </div>
+
+                    <!-- Address/Info Cards -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-gray-100">
+                            <div class="w-10 h-10 rounded-xl bg-brandLightBlue flex items-center justify-center text-brandBlue text-lg shrink-0">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Our Main Office</h4>
+                                <p class="text-xs text-gray-500 mt-1">Bole Road, Near bole medhanialem, Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-gray-100">
+                            <div class="w-10 h-10 rounded-xl bg-brandLightGreen flex items-center justify-center text-brandGreen text-lg shrink-0">
+                                <i class="fa-solid fa-envelope-open"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Direct Support Email</h4>
+                                <p class="text-xs text-gray-500 mt-1">contact@addisafrica.org</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-gray-100">
+                            <div class="w-10 h-10 rounded-xl bg-brandLightOrange flex items-center justify-center text-brandOrange text-lg shrink-0">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Inquiry Telephone</h4>
+                                <p class="text-xs text-gray-500 mt-1">+251 110 00 00 00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="pt-6 border-t border-gray-200 flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white hover:bg-brandBlue hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white hover:bg-sky-500 hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white hover:bg-brandOrange hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white hover:bg-rose-600 hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Interaction Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 h-full flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Send an Interactive Message</h3>
+                            <p class="text-sm text-gray-500 mb-8">Fill the fields and our coordinators will reach out instantly.</p>
+                        </div>
+
+                        <!-- Main Form Wrapper -->
+                        <form id="contact-form" onsubmit="handleFormSubmission(event)" class="space-y-5">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-gray-500 uppercase">First Name</label>
+                                    <input type="text" required placeholder="abebe" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-gray-500 uppercase">Email Address</label>
+                                    <input type="email" required placeholder="abebe@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-gray-500 uppercase">Interest Area</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800 bg-white">
+                                    <option>Direct Financial Contribution Inquiry</option>
+                                    <option>Become a Registered Volunteer</option>
+                                    <option>Corporate Sponsorship Programs</option>
+                                    <option>Media & Public Relations</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-gray-500 uppercase">Message Body</label>
+                                <textarea required rows="4" placeholder="Share your inquiry or request with us..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800"></textarea>
+                            </div>
+
+                            <!-- Form Status Message Banner inside DOM (Never use Alert) -->
+                            <div id="form-status-banner" class="hidden p-4 rounded-xl bg-brandLightGreen border border-brandGreen/20 text-brandGreen text-sm font-bold text-center">
+                                <i class="fa-solid fa-circle-check mr-2"></i> Thank you! Your message was transmitted successfully. We will connect soon.
+                            </div>
+
+                            <button type="submit" class="w-full py-4 bg-brandBlue hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition-all">
+                                Send Message Instantly <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-darkBg text-white py-12 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Brand Info Column -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="addis-africa-logo.jpg" alt="Addis Africa" class="h-10 w-10 rounded-full border border-white/20 object-cover" onerror="this.src='https://placehold.co/100x100/0d65c4/ffffff?text=AA'">
+                        <span class="text-lg font-black tracking-wider text-brandOrange">Addis Africa</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Dedicated to family stabilization, community resilience, and healthcare security across key regions.
+                    </p>
+                </div>
+
+                <!-- Strategic Links -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-extrabold uppercase tracking-wider text-brandBlue">Our Org</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#about" class="hover:text-brandOrange transition-colors">Our History</a></li>
+                        <li><a href="#initiatives" class="hover:text-brandOrange transition-colors">Strategic Pillars</a></li>
+                        <li><a href="#about" class="hover:text-brandOrange transition-colors">Financial Transparency</a></li>
+                        <li><a href="#contact" class="hover:text-brandOrange transition-colors">Annual Auditing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community Help -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-extrabold uppercase tracking-wider text-brandGreen">Participate</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#impact" class="hover:text-brandOrange transition-colors">Donation Calculator</a></li>
+                        <li><a href="#contact" class="hover:text-brandOrange transition-colors">Corporate Action</a></li>
+                        <li><a href="#contact" class="hover:text-brandOrange transition-colors">Careers & Vacancies</a></li>
+                        <li><a href="#contact" class="hover:text-brandOrange transition-colors">Join as Volunteer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Instant Newsletter Block -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-extrabold uppercase tracking-wider text-brandOrange">Updates Letter</h4>
+                    <p class="text-xs text-gray-400">Subscribe for quarterly on-site reports.</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Email" class="bg-white/10 border border-white/10 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-brandOrange w-full">
+                        <button onclick="triggerNewsletterAlert()" class="p-2 rounded-lg bg-brandOrange text-white text-xs font-bold hover:bg-brandOrange/80"><i class="fa-solid fa-bell"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright and legal -->
+            <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <span>&copy; 2026 Addis Africa Charitable Organization. All rights reserved.</span>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:underline">Privacy Framework</a>
+                    <a href="#" class="hover:underline">Legal Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   <script src="script.js"> </script>
+</body>
+</html>
