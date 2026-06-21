@@ -38,7 +38,7 @@
         }
 
         // Live Donation Widget Selector Action
-        let selectedDonationAmount = 500; // default state
+        let selectedDonationAmount = 50; // default state
         const inputField = document.getElementById('custom-donation-input');
         const quickImpactStatement = document.getElementById('quick-impact-statement');
 
@@ -52,7 +52,7 @@
             });
 
             // Focus target btn state
-            const targetBtn = document.getElementById(`btn-${amount}`);
+            const targetBtn = document.getElementById(`btn-{amount}`);
             if (targetBtn) {
                 targetBtn.className = 'donation-btn py-3.5 px-2 rounded-2xl border-2 border-brandOrange bg-brandLightOrange/50 text-brandOrange font-extrabold transition-all text-sm md:text-base';
             }
@@ -101,7 +101,7 @@
                     </div>
                     <div class="space-y-2">
                         <h4 class="text-xl font-bold text-gray-900">Transaction Simulated</h4>
-                        <p class="text-xs text-gray-500">Your mock donation of <span class="text-brandOrange font-black">$${selectedDonationAmount}</span> has been processed securely. In production, this ties into payment gateways like Stripe or Chapa.</p>
+                        <p class="text-xs text-gray-500">Your mock donation of <span class="text-brandOrange font-black">${selectedDonationAmount} ETB</span> has been processed securely. In production, this ties into payment gateways like Stripe or Chapa.</p>
                     </div>
                     <button onclick="closeMockPayment()" class="w-full py-3 bg-brandBlue hover:bg-blue-700 text-white font-bold rounded-xl transition-all">
                         Excellent, Close
