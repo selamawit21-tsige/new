@@ -16,9 +16,9 @@
         // Toggle About Tab Panels
         const aboutContentElement = document.getElementById('about-tab-content');
         const tabs = {
-            mission: 'To create an inclusive world where families have the tools, stability, and supportive environments required to break generational poverty.',
-            vision: 'To see every child in Africa protected, nurtured, and provided high-quality development channels with maternal-family safety nets.',
-            values: 'Solidarity, Radical Transparency, Action-Led Delivery, Compassionate Stewardship, and Long-Term community stability.'
+            mission: ' To empower vulnerable populations in Addis Ababa and surrounding areas by improving access, to educational materials, and strengtheing public institutions (schools, health facilities, rehabilitation centers , and prisons ), and promoting social reintegration, while building local capacity for sustainable, shock-responsive, and gender-inclusive development .',
+            vision: 'A just and inclusive Ethiopia where every vulnerable child, youth, and adult, regardless of their, circumstances, has access to quality education, healthcare, rehabilitation, and human dignity,',
+            values: 'Committed to the Poor, Valuing People, Responsiveness, Impactful Action.'
         };
 
         function toggleAboutTab(tabKey) {
@@ -52,7 +52,7 @@
             });
 
             // Focus target btn state
-            const targetBtn = document.getElementById(`btn-{amount}`);
+            const targetBtn = document.getElementById(`btn-${amount}`);
             if (targetBtn) {
                 targetBtn.className = 'donation-btn py-3.5 px-2 rounded-2xl border-2 border-brandOrange bg-brandLightOrange/50 text-brandOrange font-extrabold transition-all text-sm md:text-base';
             }
@@ -180,11 +180,25 @@
         function handleFormSubmission(event) {
             event.preventDefault();
             const banner = document.getElementById('form-status-banner');
-            banner.classList.remove('hidden');
-            event.target.reset(); // clear fields
-            setTimeout(() => {
-                banner.classList.add('hidden');
-            }, 6000);
+            const form = event.target;
+            const data = new FormData(form);
+
+            fetch('/api/contact', {
+                method: 'POST',
+                body: data
+            }).then(r => r.json())
+              .then(res => {
+                if (res.ok) {
+                    banner.classList.remove('hidden');
+                    form.reset();
+                    setTimeout(() => banner.classList.add('hidden'), 6000);
+                } else {
+                    alert('Submission failed: ' + (res.error || 'Unknown'));
+                }
+              }).catch(err => {
+                console.error(err);
+                alert('Network error while sending message.');
+              });
         }
 
         // Mock newsletter notification toast

@@ -1,0 +1,5 @@
+/* Extracted styles from inline for separation */
+body { font-family: 'Inter', sans-serif; }
+.active-tab { border-color: #f37021; color: #f37021; }
+
+/* Add any project-specific overrides here */

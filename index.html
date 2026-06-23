@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addis Africa Charitable Organization</title>
+    <meta name="description" content="Addis Africa Charitable Organization - supporting vulnerable families with education, healthcare and community resilience in Addis Ababa and beyond.">
+    <meta name="keywords" content="Addis Ababa, charity, nonprofit, education, healthcare, volunteering, donations">
+    <link rel="canonical" href="https://example.org/">
+    <meta name="robots" content="index,follow">
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="addis-africa-logo.jpg">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font -->
@@ -11,6 +17,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <link rel="stylesheet" href="styles.css">
     <script>
         tailwind.config = {
             theme: {
@@ -31,15 +38,7 @@
             }
         }
     </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .active-tab {
-            border-color: #f37021;
-            color: #f37021;
-        }
-    </style>
+    
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
 
@@ -114,8 +113,11 @@
                     </h1>
                     
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Addis Africa Charitable Organization empowers households, supports children, and stabilizes local communities. Together, we can build a strong, resilient framework of life.
-                    </p>
+                    <small>   Addis Africa (AA) is an indigenous, non-profit, board-led Ethiopian Civil Society Organization 
+(Registration No. 7923 with the Authority for Civil Society Organizations - ACSO). Founded in 
+2026 by a dedicated interfaith coalition of professionals, youth, and women spanning Muslim, 
+Orthodox, Evangelical, and Catholic traditions, AA operates at the intersection of high growth 
+and urgent localized shocks in urban and peripheral Ethiopian communities. </small> </p>
                     
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
                         <a href="#initiatives" class="w-full sm:w-auto px-8 py-4 bg-brandBlue hover:bg-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center">
@@ -129,16 +131,16 @@
                     <!-- Impact Quick Badges -->
                     <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200/60 max-w-md mx-auto lg:mx-0">
                         <div class="text-center lg:text-left">
-                            <span class="block text-2xl sm:text-3xl font-extrabold text-brandBlue">15k+</span>
-                            <span class="text-xs text-gray-500 font-medium">Families Supported</span>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-brandBlue">100+</span>
+                            <span class="text-xs text-gray-500 font-medium">Students Supported</span>
                         </div>
                         <div class="text-center lg:text-left">
                             <span class="block text-2xl sm:text-3xl font-extrabold text-brandGreen">45+</span>
-                            <span class="text-xs text-gray-500 font-medium">Active Initiatives</span>
+                            <span class="text-xs text-gray-500 font-medium">Health Facilities</span>
                         </div>
                         <div class="text-center lg:text-left">
                             <span class="block text-2xl sm:text-3xl font-extrabold text-brandOrange">100%</span>
-                            <span class="text-xs text-gray-500 font-medium">Direct Impact</span>
+                            <span class="text-xs text-gray-500 font-medium"></span>
                         </div>
                     </div>
                 </div>
@@ -215,15 +217,19 @@
                     </h2>
                     
                     <p class="text-gray-600 leading-relaxed">
-                        Our logo embodies the three primary components of sustainable development: The 
-                        <strong class="text-brandBlue">Father/Male framework (represented in Blue)</strong> representing stability and defense, the 
-                        <strong class="text-brandGreen">Mother/Female framework (represented in Green)</strong> signifying nurturing and growth, and the 
-                        <strong class="text-brandOrange">Child (represented in Orange)</strong> in the center, representing the future. 
+                        Addis Africa was founded on the belief that diversity is a strength, not a division. Our founding 
+members include: 
+                        <strong class="text-brandBlue"> <ul>Religious diversity: Muslims, Orthodox Christians, Evangelicals, and Catholics working 
+side by side </ul></strong>
+<br>
+                        <strong class="text-brandGreen"><ul>Professional diversity: Development experts, health professionals, educators, social 
+workers, volunteers, and spiritual leaders  </ul></strong> 
+<br>
+                        <strong class="text-brandOrange"><ul>Youth and women: Significant representation of young people and women in leadership 
+and founding roles.   </ul></strong> 
                     </p>
 
-                    <p class="text-gray-600 leading-relaxed">
-                        Together, wrapped in a protective heart, we aim to deliver resources and structural aid to help communities establish strong foundations for growth.
-                    </p>
+                   
 
                     <!-- Interactive About Tabs -->
                     <div class="border-b border-gray-100 flex gap-6 text-sm font-bold">
@@ -234,8 +240,10 @@
 
                     <div id="about-tab-content" class="text-sm text-gray-600 bg-gray-50 p-5 rounded-2xl min-h-[100px] transition-all duration-300">
                         <!-- Dynamic content populated by JS -->
-                        To create an inclusive world where families have the tools, stability, and supportive environments required to break generational poverty.
-                    </div>
+                     To empower vulnerable populations in Addis Ababa and surrounding areas by improving access
+to educational materials, strengthening public institutions (schools, health facilities, rehabilitation
+centers, and prisons), and promoting social reintegration, while building local capacity for
+sustainable, shock-responsive, and gender-inclusive development. </div>
                 </div>
 
                 <!-- Right Visual Showcase with actual Logo & Mock imagery layout -->
@@ -291,11 +299,12 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 group-hover:text-brandBlue transition-colors">Family Stability & Aid</h3>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            Securing essential home items, livelihood guidance, and emergency resources to keep mothers, fathers, and child support units fully functional and active.
-                        </p>
+Establish and support community-based 
+rehabilitation centers for street children 
+and at-risk youth   </p>
                         <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-gray-500">
                             <span>Status: Active</span>
-                            <span class="text-brandBlue">4.2k Families Helped <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                            <span class="text-brandBlue">1.2k Families prospected <i class="fa-solid fa-arrow-right ml-1"></i></span>
                         </div>
                     </div>
                 </div>
@@ -309,11 +318,12 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 group-hover:text-brandGreen transition-colors">Sustainable Education</h3>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            Deploying physical learning infrastructure, clean school feeding programs, and training facilities to build community knowledge from the ground up.
-                        </p>
+                          Improve access to quality education 
+through material support and 
+institutional strengthening of schools   </p>
                         <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-gray-500">
                             <span>Status: Growing</span>
-                            <span class="text-brandGreen">22 Schools Rebuilt <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                            <span class="text-brandGreen">500 Students listed <i class="fa-solid fa-arrow-right ml-1"></i></span>
                         </div>
                     </div>
                 </div>
@@ -327,11 +337,12 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 group-hover:text-brandOrange transition-colors">Healthcare Protection</h3>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            Ensuring healthy pregnancies, immediate maternal health items, vaccines, clean hydration, and proper nourishment parameters for all child brackets.
-                        </p>
+                          Strengthen primary health facilities to 
+deliver essential, equitable healthcare 
+services  </p>
                         <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-gray-500">
                             <span>Status: Priority</span>
-                            <span class="text-brandOrange">12k Children Serviced <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                            <span class="text-brandOrange">120 families prospected <i class="fa-solid fa-arrow-right ml-1"></i></span>
                         </div>
                     </div>
                 </div>
@@ -355,7 +366,7 @@
                     </div>
                     <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Quantify Your Humanitarian Reach</h2>
                     <p class="text-gray-300 leading-relaxed">
-                        Every dollar counts. Use our calculator to understand exactly how your voluntary contributions are translated into boots-on-the-ground support in Africa.
+                        Every money counts. Use our calculator to understand exactly how your voluntary contributions are translated into boots-on-the-ground support in Africa.
                     </p>
                     
                     <div class="space-y-4 pt-4">
@@ -454,7 +465,7 @@
                             </div>
                         </div>
                         <p class="text-lg italic text-gray-600 leading-relaxed" id="testimonial-quote">
-                            "Thanks to the community tools and direct help provided by Addis Africa, 15 families in our district now have running water and support systems."
+                            "Thanks to the community tools and direct help provided by Addis Africa, 15 families in our district now have gettingg aid  and support systems."
                         </p>
                     </div>
 
@@ -498,7 +509,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900 text-sm">Our Main Office</h4>
-                                <p class="text-xs text-gray-500 mt-1">Bole Road, Near bole medhanialem, Addis Ababa, Ethiopia</p>
+                                <p class="text-xs text-gray-500 mt-1">Bole Road, Near to Adey Abeba stadium, cozy building, 5th floor </p>
                             </div>
                         </div>
 
@@ -508,7 +519,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900 text-sm">Direct Support Email</h4>
-                                <p class="text-xs text-gray-500 mt-1">contact@addisafrica.org</p>
+                                <p class="text-xs text-gray-500 mt-1">addisafricacso@gmail.com</p>
                             </div>
                         </div>
 
@@ -518,14 +529,14 @@
                             </div>
                             <div>
                                 <h4 class="font-bold text-gray-900 text-sm">Inquiry Telephone</h4>
-                                <p class="text-xs text-gray-500 mt-1">+251 110 00 00 00</p>
+                                <p class="text-xs text-gray-500 mt-1">+2519 81684245</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Social Media Links -->
                     <div class="pt-6 border-t border-gray-200 flex items-center gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white hover:bg-brandBlue hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/share/1EPvMfQyV2/" class="w-10 h-10 rounded-full bg-white hover:bg-brandBlue hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-white hover:bg-sky-500 hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-twitter"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-white hover:bg-brandOrange hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full bg-white hover:bg-rose-600 hover:text-white border border-gray-200 flex items-center justify-center text-gray-600 transition-all"><i class="fa-brands fa-youtube"></i></a>
@@ -541,21 +552,21 @@
                         </div>
 
                         <!-- Main Form Wrapper -->
-                        <form id="contact-form" onsubmit="handleFormSubmission(event)" class="space-y-5">
+                        <form id="contact-form" onsubmit="handleFormSubmission(event)" class="space-y-5" enctype="multipart/form-data">
                             <div class="grid sm:grid-cols-2 gap-5">
                                 <div class="space-y-2">
                                     <label class="text-xs font-bold text-gray-500 uppercase">First Name</label>
-                                    <input type="text" required placeholder="abebe" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800">
+                                    <input name="firstName" type="text" required placeholder="abebe" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800">
                                 </div>
                                 <div class="space-y-2">
                                     <label class="text-xs font-bold text-gray-500 uppercase">Email Address</label>
-                                    <input type="email" required placeholder="abebe@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800">
+                                    <input name="email" type="email" required placeholder="abebe@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800">
                                 </div>
                             </div>
 
                             <div class="space-y-2">
                                 <label class="text-xs font-bold text-gray-500 uppercase">Interest Area</label>
-                                <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800 bg-white">
+                                <select name="interest" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800 bg-white">
                                     <option>Direct Financial Contribution Inquiry</option>
                                     <option>Become a Registered Volunteer</option>
                                     <option>Corporate Sponsorship Programs</option>
@@ -565,7 +576,12 @@
 
                             <div class="space-y-2">
                                 <label class="text-xs font-bold text-gray-500 uppercase">Message Body</label>
-                                <textarea required rows="4" placeholder="Share your inquiry or request with us..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800"></textarea>
+                                <textarea name="message" required rows="4" placeholder="Share your inquiry or request with us..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandBlue font-medium text-sm text-gray-800"></textarea>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-gray-500 uppercase">Attachment (optional)</label>
+                                <input name="attachment" type="file" accept="image/*,.pdf" class="w-full text-sm">
                             </div>
 
                             <!-- Form Status Message Banner inside DOM (Never use Alert) -->
